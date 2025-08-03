@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith Kanchukatla - Data Engineer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #2980b9;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: linear-gradient(45deg, #2980b9, #1abc9c);
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .experience-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-meta {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            margin-left: 1.5rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">RK</div>
+            <h1>Rohith Kanchukatla</h1>
+            <p class="subtitle">Data Engineer | 2.5 Years Experience</p>
+            <div class="contact-info">
+                <a href="mailto:rohith.kanchukatla@email.com" class="contact-item">📧 rohith.kanchukatla@email.com</a>
+                <a href="https://linkedin.com/in/rohithkanchukatla" class="contact-item">💼 LinkedIn</a>
+                <a href="https://github.com/rohithkanchukatla" class="contact-item">🐙 GitHub</a>
+                <span class="contact-item">📱 +1 (555) 123-4567</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Passionate Data Engineer with 2.5 years of experience in designing, building, and maintaining robust data pipelines and analytics solutions. Specialized in SQL Server, Python, and modern data technologies. Committed to transforming raw data into actionable insights that drive business decisions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">SQL Server</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">C#</div>
+                <div class="skill-item">ASP.NET</div>
+                <div class="skill-item">Data Warehousing</div>
+                <div class="skill-item">ETL/ELT</div>
+                <div class="skill-item">Azure Data Factory</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">Apache Spark</div>
+                <div class="skill-item">Data Modeling</div>
+                <div class="skill-item">Git</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Data Engineer</h3>
+                <div class="experience-meta">Tech Solutions Inc. | January 2022 - Present</div>
+                <ul>
+                    <li>Designed and implemented scalable ETL pipelines processing 10M+ records daily using SQL Server and Python</li>
+                    <li>Developed automated data quality monitoring systems reducing data errors by 40%</li>
+                    <li>Built real-time analytics dashboards using Power BI serving 100+ business users</li>
+                    <li>Optimized database performance through indexing and query tuning, improving response times by 60%</li>
+                    <li>Collaborated with cross-functional teams to deliver data-driven solutions for business intelligence</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Junior Data Analyst</h3>
+                <div class="experience-meta">DataCorp Solutions | June 2021 - December 2021</div>
+                <ul>
+                    <li>Analyzed large datasets using SQL and Python to identify business trends and insights</li>
+                    <li>Created automated reporting solutions reducing manual effort by 50%</li>
+                    <li>Supported data migration projects from legacy systems to modern data platforms</li>
+                    <li>Maintained data documentation and established best practices for data governance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Real-time Data Pipeline</h3>
+                    <p>Built a comprehensive ETL pipeline using Python and SQL Server that processes streaming data from multiple sources. Implemented error handling, data validation, and automated monitoring.</p>
+                    <a href="https://github.com/rohithkanchukatla/realtime-data-pipeline" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Customer Analytics Dashboard</h3>
+                    <p>Developed an interactive dashboard using ASP.NET and C# that provides real-time customer insights. Features include segmentation analysis, behavioral tracking, and predictive modeling.</p>
+                    <a href="https://github.com/rohithkanchukatla/customer-analytics-dashboard" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Data Quality Framework</h3>
+                    <p>Created a comprehensive data quality monitoring framework using Python that automatically validates data integrity, completeness, and accuracy across multiple data sources.</p>
+                    <a href="https://github.com/rohithkanchukatla/data-quality-framework" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>SQL Server Performance Optimizer</h3>
+                    <p>Developed a set of SQL scripts and procedures to automatically identify and optimize slow-performing queries. Includes indexing recommendations and execution plan analysis.</p>
+                    <a href="https://github.com/rohithkanchukatla/sql-performance-optimizer" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education & Certifications</h2>
+            <div class="experience-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <div class="experience-meta">University of Technology | 2017 - 2021</div>
+                <p>Relevant Coursework: Database Systems, Data Structures, Software Engineering, Statistics</p>
+            </div>
+            <div class="experience-item">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Microsoft Certified: Azure Data Engineer Associate</li>
+                    <li>Microsoft SQL Server Database Administration</li>
+                    <li>Python for Data Science (Coursera)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contact Me</h2>
+            <p>I'm always interested in discussing new opportunities and data engineering challenges. Feel free to reach out!</p>
+            <div class="contact-info" style="margin-top: 1rem;">
+                <a href="mailto:rohith.kanchukatla@email.com" class="contact-item">📧 Email Me</a>
+                <a href="https://linkedin.com/in/rohithkanchukatla" class="contact-item">💼 Connect on LinkedIn</a>
+                <a href="https://github.com/rohithkanchukatla" class="contact-item">🐙 View My GitHub</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
